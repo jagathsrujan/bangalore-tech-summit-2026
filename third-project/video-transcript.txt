@@ -1,0 +1,134 @@
+[00:00] And we're back with another build, but this time we're not building a motor, we're building
+[00:07] something much more important, a complete servo actuator for a robot.
+[00:12] In my previous video, I built an axial flux motor that had the potential to be an absolute
+[00:18] beast for this project.
+[00:19] Unfortunately, the design really needed a steel core, and right now I'm limited to 3D printing
+[00:25] everything in plastic.
+[00:27] But that's not going to stop this project.
+[00:29] The goal is to build a fully 3D printable collaborative robot, or kobot, from scratch.
+[00:35] Now, if you're wondering what makes a robot collaborative, it's because these robots are
+[00:40] designed to safely work alongside humans, without the need for safe defenses.
+[00:46] Industrial kobots constantly monitor the torque produced by each joint.
+[00:50] If they detect an unexpected load, like hitting a person or an object, they can instantly
+[00:55] stop the motor, making them much safer than traditional industrial robots.
+[01:00] And to do that, you need high-torque servo actuators.
+[01:03] So let's build one!
+[01:07] This is the finished 4-1 actuator, which forms the foundation of the robot's joint.
+[01:13] Inside is a planetary gearbox that converts the high-speed, low-torque output of this
+[01:17] 50-10 brushless DC motor into a slower, much higher torque output, and that's exactly
+[01:23] what robots need.
+[01:25] Unlike drones, robots don't care about spinning at thousands of RPM.
+[01:29] What they need is controlled motion, with as much torque as possible.
+[01:33] Years ago, hobby robots were almost entirely built using NEMA 17 stepper motors.
+[01:38] They're cheap, simple, and easy to control.
+[01:41] But if you're trying to build a robot that behaves more like an industrial arm,
+[01:45] brushless servo motors are the future.
+[01:47] The problem is that industrial servo actuators cost hundreds, sometimes thousands of dollars.
+[01:53] On the other end of the spectrum, hobby servos are tiny and don't produce nearly enough
+[01:57] torque for larger robots.
+[01:59] So in this series, we're building our own.
+[02:01] A completely 3D-printable BLDC servo actuator that's modular, affordable, and eventually
+[02:07] capable of a 100-to-1 gear reduction.
+[02:10] In this video, we'll build the first stage, the 4-to-1 planetary gearbox.
+[02:14] The complete CAD files and assembly guide are linked in the description below if you'd
+[02:17] like to build one yourself.
+[02:20] Let's get started!
+[02:22] Here are all the parts you'll need.
+[02:24] First, you'll obviously need a 3D printer to print all of the components.
+[02:29] You'll also need a basic screwdriver set, and I highly recommend using a small electric
+[02:34] screwdriver or hand drill to speed up the assembly process.
+[02:38] The heart of this actuator is a 5010 brushless DC motor.
+[02:43] These are commonly used on large drones, and you can easily find them on Teemu or
+[02:47] Aliexpress for under $15 AUD.
+[02:50] For the amount of power they produce, they're an incredible value.
+[02:54] Next we have the motor mount, followed by the helical ring gear that forms the outer gear
+[02:58] of the planetary gearbox.
+[03:01] The gearbox has been designed with a precise 4-to-1 reduction ratio.
+[03:05] We also have the planet gears, the planet carrier, the bearing carrier, and finally
+[03:10] the end cap that seals everything together.
+[03:13] All of the bearings, fasteners, and hardware are listed in the description below.
+[03:21] Let's begin the assembly.
+[03:22] The first thing to do is position the motor so that the wires exit through the opening
+[03:26] in the housing.
+[03:27] This not only keeps the wiring organized, but also gives the rotor plenty of clearance
+[03:31] to spin freely once everything is assembled.
+[03:35] Using the four M3x10mm screws supplied with the motor, bolt the motor securely onto the
+[03:40] motor mount.
+[03:42] Since these screws are included with the motor, there's no need to purchase them
+[03:45] separately.
+[03:46] Next, mount the sun gear onto the motor shaft using four M3x12mm screws.
+[03:52] And here's a quick tip, don't use a power drill for this step.
+[03:56] The rotor magnets are surprisingly strong, and if your screwdriver slips, those sharp
+[04:00] rotor edges will remind you very quickly why hand tools exist.
+[04:04] Trust me, your fingers will thank you.
+[04:07] Once the sun gear is installed, place the center bearing carrier over the top.
+[04:11] This holds a 10mm inner diameter, 22mm outer diameter, and 6mm thick bearing that supports
+[04:17] the planet carrier.
+[04:19] We'll leave that aside for now and move on to the planet gears.
+[04:22] Each planet gear uses four bearings, measuring 4mm inner diameter, 10mm outer diameter,
+[04:28] and 4mm thick.
+[04:30] Simply press fit each bearing into the printed gear.
+[04:33] The printed spacers fit between the bearings and the gear to keep everything perfectly
+[04:37] aligned.
+[04:38] Once each gear is assembled, bolt them into the planet carrier.
+[04:42] Before moving on, make sure every gear spins smoothly, with almost no resistance.
+[04:47] Now it's time to join everything together.
+[04:49] Using four M4x40mm screws, bolt the motor mount to the helical ring gear.
+[04:54] Pay attention to the orientation here.
+[04:56] The gear teeth should face away from the motor, leaving clearance inside for the heads
+[05:00] of the planet carrier screws.
+[05:02] For the printed threads, I actually recommend using a tight tolerance print, rather than
+[05:06] heat set inserts.
+[05:08] Simply run the screw through the plastic to form its own threads.
+[05:11] It's quicker, lighter, and works surprisingly well for this application.
+[05:15] Before sealing the gearbox, rotate everything by hand to make sure the gears mesh correctly
+[05:20] and spin freely.
+[05:21] If anything feels tight, now is the time to fix it.
+[05:24] Finally, press the large output bearing into the top of the planet carrier.
+[05:28] This is a 45mm inner diameter, 58mm outer diameter, and 7mm thick bearing.
+[05:34] Place the end cap on top and bolt everything together.
+[05:37] And just like that, you now have a fully functional 4-1 brushless servo actuator ready
+[05:43] for your robot.
+[05:44] Now, you might be wondering, if the final design uses a cycloidal gearbox anyway, why
+[05:50] not just connect it directly to the motor?
+[05:52] The reason is that planetary gearboxes are much better suited to handling the very high
+[05:58] RPM of a BLDC motor.
+[06:01] By reducing the speed by 4-1 first, they also multiply the available torque before it
+[06:06] reaches the cycloidal stage.
+[06:08] That means the cycloidal gearbox operates at a lower input speed, with less vibration,
+[06:13] lower bearing loads, and better overall efficiency.
+[06:17] Instead of asking one gearbox to do everything, each stage does what it does best.
+[06:23] The planetary gearbox provides an efficient first reduction, while the cycloidal gearbox
+[06:27] delivers the large final reduction needed for a robot joint.
+[06:31] Together, they create a smoother, stronger, and more compact actuator with an overall
+[06:36] 100-to-1 reduction, perfect for this DIY cobot project.
+[06:41] So where would a collaborative robot like this actually be used?
+[06:46] Cobots are becoming increasingly common in factories and small businesses because they
+[06:50] can safely work alongside people without needing large safety fences.
+[06:55] You'll find them performing tasks like pick and place, machine tending, packaging,
+[07:00] palletizing, quality inspection, screw driving, dispensing adhesives, and even light assembly
+[07:06] work.
+[07:07] The goal of this project isn't to compete with industrial robots worth tens of thousands
+[07:12] of dollars.
+[07:13] It's to create an affordable, open-source platform that anyone can build, modify, and
+[07:18] learn from.
+[07:19] Whether you're a student, a hobbyist, or an engineer, you'll be able to experiment
+[07:24] with real servo-controlled robotics without the industrial price tag.
+[07:29] Now I want to give a huge shout-out to Mission Machine for releasing his incredible three-phase
+[07:34] cycloidal gearbox as open source.
+[07:37] His design made it much easier to customize the actuator and adapt the motor position
+[07:41] for this robot.
+[07:43] This actuator is only the first stage.
+[07:45] Right now it provides a 4-to-1 reduction, but the real magic happens when we attach
+[07:50] a second stage cycloidal gearbox with a 25-to-1 reduction, multiply those together, and we end
+[07:56] up with an overall gear reduction of 100-to-1.
+[08:00] That puts the actuator into the same ballpark as many industrial collaborative robot joints
+[08:05] in terms of output torque, especially considering this entire project is built primarily from
+[08:10] 3D printed parts.
+[08:12] And yes, believe it or not, I actually asked ChatGPT to help select the motor for this
+[08:18] project.
+[08:19] If you'd like to build one of these yourself, you can download all of the CAD files using
+[08:23] the link in the description below.
+[08:25] If you enjoyed the video, consider leaving a like and subscribing, because this is only
+[08:29] the beginning of the complete DIY collaborative robot build.
+[08:33] Thanks for watching, and until next time, let's rotate.

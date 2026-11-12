@@ -1,0 +1,6 @@
+[submodule "3d-printable-planetary-gearbox"]
+	path = 3d-printable-planetary-gearbox
+	url = https://github.com/jagathsrujan/3d-printable-planetary-gearbox.git
+[submodule "cycloidal-drive-print-ready"]
+	path = cycloidal-drive-print-ready
+	url = https://github.com/jagathsrujan/cycloidal-drive-print-ready.git
